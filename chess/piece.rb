@@ -2,17 +2,15 @@ require_relative "board"
 
 class Piece
 
-attr_accessor :pos
+attr_reader :color
 
-  def initialize(name, pos)
+  def initialize(name, color)
     @name = name
-    @pos = pos
+    @color = color
   end
 
   def to_s()
-  end
-
-  def empty?()
+    @name
   end
 
   def symbol()
